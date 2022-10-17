@@ -11,15 +11,22 @@
  * Return: it returns an integer
  */
 
-int main(void)
-{
-	char ch = 'a';
+	int main(void)
 
-	for (ch = 'z'; ch >= 'a'; ch--)
+{
+
+		int num  = 49;
+
+
+	for (num = 48; num <= 57; num++)
 	{
-	putchar(ch);
-	if (ch == 'a')
-	putchar('\n);
+		putchar(num + '\0');
+		if (num != 57)
+		{
+		putchar(',');
+		putchar(' ');
+		}
 	}
+	putchar('\n');
 return (0);
 }
