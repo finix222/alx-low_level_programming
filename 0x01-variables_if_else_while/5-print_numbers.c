@@ -8,11 +8,10 @@
 
 /**
  *
- * * main - this function is the entry function for all C programs
+ * main - this function is the entry function for all C programs
  *
- * * Return: it returns an integer
- *
- * */
+ * Return: it returns an integer
+ */
 
 int main(void)
 
