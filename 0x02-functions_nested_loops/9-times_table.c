@@ -1,25 +1,45 @@
+#include <stdio.h>
 #include "main.h"
 /**
- *  times_table - a function that prints the 9 times table, starting with 0.
- *  Return: Nothing
- */
+* print_long - prints characters as numbers
+* @value: number to be printed
+* Return: none
+*/
+void print_long(int value)
+{
+	if (value != 0)
+	{
+		print_long(value / 10);
+		_putchar((value	% 10) + '0');
+	}
+}
+/**
+* times_table - ks if argument is an alphabet
+* Return: 1 if number is a small letter , 0 if it isn't
+*/
 void times_table(void)
 {
-	int row, column, product;
+	int i = 0;
+	int j = 0;
+	int m = 0;
 
-	for (row = 0; row <= 9; row++)
+	for (i = 0; i <= 9; i++)
 	{
-		_putchar(0);
-		for (column = 1; column <= 9; column++)
+		for (j = 0; j <= 9; j++)
 		{
-			_putchar(',');
-			_putchar(' ');
-			product = row * column;
-			if (product <= 9)
-				_putchar(' ');
+			m = i * j;
+			if (m > 0)
+				print_long(m);
 			else
-				_putchar((product / 10) + '0');
-			_putchar((product % 10) + '0');
+				_putchar('0');
+			if (j < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				if (i * (j + 1) < 10)
+				_putchar(' ');
+			}
+
 		}
 		_putchar('\n');
 	}
